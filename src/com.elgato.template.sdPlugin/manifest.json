@@ -1,49 +1,48 @@
 {
-	"SDKVersion": 2,
-	"Author": "Elgato Systems",
-	"CodePath": "app.html",
-	"Description": "Example description",
-	"Name": "Stream Deck Template",
-	"Icon": "actions/template/assets/action",
-	"URL": "https://www.elgato.com/en/gaming/stream-deck",
-	"Version": "1.0.2",
-	"Software": {
-		"MinimumVersion": "5.0"
-	},
-	"OS": [
-		{
-			"Platform": "mac",
-			"MinimumVersion": "10.11"
-		},
-		{
-			"Platform": "windows",
-			"MinimumVersion": "10"
-		}
-	],
-	"Category": "Template Plugin",
-	"CategoryIcon": "actions/template/assets/actionimage",
-	"Actions": [
-		{
-			"Icon": "actions/template/assets/actionimage",
-			"Name": "Example Action",
-			"Controllers": ["Keypad", "Encoder"],
-			"Encoder": {
-				"layout": "$B1",
-				"TriggerDescription": {
-					"Rotate": "Describe the rotation",
-					"Push": "Describe the encoder push",
-					"Touch": "Describe the touch",
-					"LongTouch": "Describe the long touch"
-				}
-			},
-			"States": [
-				{
-					"Image": "actions/template/assets/action"
-				}
-			],
-			"Tooltip": "This is an example tooltip",
-			"UUID": "com.elgato.template.action",
-			"PropertyInspectorPath": "actions/template/property-inspector/inspector.html"
-		}
-	]
+  "Author": "Diogenes Brito",
+  "CodePath": "plugin.js",
+  "Description": "A plugin to navigate between Stream Deck pages using the dial functionality on Stream Deck+ models.",
+  "Icon": "assets/icon.png",
+  "Name": "StreamDeck+ Page Switcher",
+  "Category": "Utility",
+  "CategoryIcon": "assets/category_icon.png",
+  "OS": [
+    {"Platform": "mac", "MinimumVersion": "10.15"},
+    {"Platform": "windows", "MinimumVersion": "10"}
+  ],
+  "Software": {
+    "MinimumVersion": "5.0"
+  },
+  "Version": "1.0",
+  "SDKVersion": "3",
+  "ApplicationsToMonitor": {
+    "Applications": []
+  },
+  "Actions": [
+    {
+      "Icon": "assets/dial_icon.png",
+      "Name": "Dial Page Control",
+      "Tooltip": "Use the dial to navigate Stream Deck pages seamlessly.",
+      "UUID": "com.diogenesbrito.streamdeckpagedial",
+      "States": [
+        {
+          "Image": "assets/dial_icon_active.png",
+          "MultiAction": false,
+          "Title": "Page Navigator"
+        }
+      ],
+      "PropertyInspectorPath": "PropertyInspector.html",
+      "SupportedInMultiActions": false,
+      "Properties": [
+        {
+          "Name": "totalPages",
+          "Type": "integer",
+          "DefaultValue": 10,
+          "Label": "Total Pages",
+          "Required": true,
+          "PropertyInspectorHtml": "<div><label for='totalPages'>Total Pages:</label><input type='number' id='totalPages' value='10' min='1'></div>"
+        }
+      ]
+    }
+  ]
 }
