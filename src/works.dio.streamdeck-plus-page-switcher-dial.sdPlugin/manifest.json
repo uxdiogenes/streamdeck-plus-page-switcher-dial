@@ -1,6 +1,6 @@
 {
   "Author": "Diogenes Brito",
-  "CodePath": "plugin.js",
+  "CodePath": "app.js",
   "Description": "Navigate between Stream Deck pages in the fastest way, using the dial functionality on Stream Deck+ models.",
   "Icon": "assets/icon.png",
   "Name": "StreamDeck+ Page Switcher Dial Action",
@@ -31,6 +31,8 @@
           "Title": "Page Navigator"
         }
       ],
+      "DeviceModel": "streamdeckplus",
+      "DeviceTarget": "dials",
       "PropertyInspectorPath": "PropertyInspector.html",
       "SupportedInMultiActions": false,
       "Properties": [
