@@ -1,73 +1,40 @@
+# Dial Page Navigator for Stream Deck
 
-# Stream Deck Plugin Template
-
-The `Stream Deck Plugin Template` is a template to let you get started quickly when writing a JavaScript plugin for [Stream Deck](https://docs.elgato.com/sdk/). `Stream Deck Plugin Template` requires Stream Deck 6.0 or later.
-
-## Description
-
-`Stream Deck Plugin Template` is a complete plugin that shows you how to
-
-- load and save settings using Stream Deck's persistent store
-- setup and communicate with the Property Inspector
-- pass messages directly from Property Inspector to the plugin (and vice versa)
-- localize your Property Inspector's UI to another language
+Welcome to the GitHub repository for the Dial Page Navigator, a plugin designed for the Elgato Stream Deck. This plugin enables users to navigate between different Stream Deck pages using a dial control, providing a seamless and efficient way to switch views without relying on standard button presses.
 
 ## Features
+- **Dial Navigation**: Use a dial to navigate through Stream Deck pages.
+- **Configurable Page Count**: Set the total number of pages directly through the plugin's settings.
+- **Directional Control**: Choose to navigate pages clockwise or counter-clockwise.
+- **Current Page Display**: Shows the current page number on the Stream Deck.
 
-- code written in Javascript
-- cross-platform (macOS, Windows)
-- localization support
-- styled [Property Inspector](https://developer.elgato.com/documentation/stream-deck/sdk/property-inspector/) included
-- Property Inspector contains all required boilerplate code to let you instantly work on your plugin's code.
+## User Experience
+Upon installing and configuring the plugin, users will experience:
+- **Ease of Use**: Turn the dial to switch pages effortlessly.
+- **Customization**: Adjust settings to match the actual number of pages on your Stream Deck.
+- **Feedback**: Immediate visual feedback on the Stream Deck displaying the current page number.
 
-## Quick Start Guide
+## Installation
+1. **Clone the Repository**: Start by cloning this repository to your local machine.
+2. **Install the Plugin**: Copy the plugin folder into your Stream Deck's plugins directory.
+3. **Restart Stream Deck Software**: Ensure the Stream Deck software recognizes the new plugin.
 
-A short guide to help you get started quickly.
+## Configuration
+To configure the plugin:
+1. Open the Stream Deck software.
+2. Locate the Dial Page Navigator action and drag it to one of the keys on your Stream Deck.
+3. Click on the key and then click on the small gear icon at the bottom right to open the Property Inspector.
+4. Set the total number of pages and adjust other settings like navigation direction.
 
-### Clone the repo
+## Usage
+- **Navigate Pages**: Simply rotate the dial on your Stream Deck to move between pages.
+- **View Current Page**: Look at the display of the Stream Deck key where the plugin is active to see the current page number.
 
-```git clone https://github.com/elgatosf/streamdeck-plugin-template```
+## Support
+For support, questions, or more information, please open an issue in this GitHub repository or check out the [Elgato Stream Deck forums](https://forum.elgato.com).
 
-### Replace Name
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your enhancements or fixes.
 
-Rename the folder as well as any references.
-
-`com.elgato.template.sdPlugin` with `my.domain.plugin-name.sdPlugin`
-
-> [!IMPORTANT]  
-> When sym-linking the plugin, the folder name must end with `.sdPlugin`.
-
-### Get the latest library
-
-You can either clone the javascript library or add it as a submodule to your repository.
-
-#### Clone
-
-```git clone https://github.com/elgatosf/streamdeck-javascript-sdk src/my.domain.plugin-name/libs```
-
-#### Add Submodule
-
-```git submodule add https://github.com/elgatosf/streamdeck-javascript-sdk src/my.domain.plugin-name/libs```
-
-### Start Coding
-
-You can get started in app.js!
-
-```javascript
-const myAction = new Action('com.elgato.template.action');
-
-/**
- * The first event fired when Stream Deck starts
- */
-$SD.onConnected(({ actionInfo, appInfo, connection, messageType, port, uuid }) => {
-  console.log('Stream Deck connected!');
-});
-
-myAction.onKeyUp(({ action, context, device, event, payload }) => {
-  console.log('Your key code goes here!');
-});
-
-myAction.onDialRotate(({ action, context, device, event, payload }) => {
-  console.log('Your dial code goes here!');
-});
-```
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
