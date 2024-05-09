@@ -1,9 +1,9 @@
 {
   "Author": "Diogenes Brito",
   "CodePath": "plugin.js",
-  "Description": "A plugin to navigate between Stream Deck pages using the dial functionality on Stream Deck+ models.",
+  "Description": "Navigate between Stream Deck pages in the fastest way, using the dial functionality on Stream Deck+ models.",
   "Icon": "assets/icon.png",
-  "Name": "StreamDeck+ Page Switcher",
+  "Name": "StreamDeck+ Page Switcher Dial Action",
   "Category": "Utility",
   "CategoryIcon": "assets/category_icon.png",
   "OS": [
@@ -23,7 +23,7 @@
       "Icon": "assets/dial_icon.png",
       "Name": "Dial Page Control",
       "Tooltip": "Use the dial to navigate Stream Deck pages seamlessly.",
-      "UUID": "com.diogenesbrito.streamdeckpagedial",
+      "UUID": "works.dio.streamdeck-plus-page-switcher-dial.sdPlugin",
       "States": [
         {
           "Image": "assets/dial_icon_active.png",
