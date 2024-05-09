@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        label, input, select {
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="totalPages">Total Number of Pages:</label>
+        <input type="number" id="totalPages" min="1" required>
+    </div>
+    <div>
+        <button onclick="saveSettings()">Save</button>
+    </div>
+
+    <script type="text/javascript">
+        const sd = window.OpenSD();
+        document.addEventListener('DOMContentLoaded', function() {
+            const totalPagesInput = document.getElementById('totalPages');
+
+            sd.on('didReceiveSettings', function(settings) {
+                totalPagesInput.value = settings.settings.totalPages || 10;
+            });
+
+            window.saveSettings = function() {
+                sd.setSettings({
+                    totalPages: parseInt(totalPagesInput.value, 10)
+                });
+            };
+        });
+    </script>
+</body>
+</html>
